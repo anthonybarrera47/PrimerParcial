@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace PrimerParcial
 {
-    public partial class Form1 : Form
+    public partial class VentanaPrincipal : Form
     {
-        public Form1()
+        public VentanaPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void VentanaPrincipal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
