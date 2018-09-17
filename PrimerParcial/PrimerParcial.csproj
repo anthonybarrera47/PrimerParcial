@@ -52,7 +52,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\VendedorBLL.cs" />
     <Compile Include="DAL\Contexto.cs" />
+    <Compile Include="Entidades\Vendedor.cs" />
     <Compile Include="UI\Registro\Registro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,9 +112,7 @@
     <None Include="Resources\if_new10_216291.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BLL\" />
     <Folder Include="DAL\Scripts\" />
-    <Folder Include="Entidades\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

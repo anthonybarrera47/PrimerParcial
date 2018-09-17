@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PrimerParcial.UI.Registro;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,9 +18,13 @@ namespace PrimerParcial
             InitializeComponent();
         }
 
-        private void VentanaPrincipal_Load(object sender, EventArgs e)
-        {
+        
 
+        private void registrarVendedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Registro registro = new Registro();
+            registro.MdiParent = this;
+            registro.Show();
         }
     }
 }

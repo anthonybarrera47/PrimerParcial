@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PrimerParcial.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -9,7 +10,8 @@ namespace PrimerParcial.DAL
 {
     public class Contexto : DbContext
     {
-        public DbSet<String> hola { get; set; }
+        public DbSet<Vendedor> vendedor{ get; set; }
+
         public Contexto() : base ("ConStr")
         {
 
