@@ -26,5 +26,10 @@ namespace PrimerParcial
             registro.MdiParent = this;
             registro.Show();
         }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

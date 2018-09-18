@@ -69,7 +69,7 @@ namespace PrimerParcial.UI.Registro
             }
             if(retencionPorcentajeNumericUpDown.Value == 0)
             {
-                errorProvider.SetError(sueldoNumericUpDown, "Este Campo No puede Ser Cero");
+                errorProvider.SetError(retencionPorcentajeNumericUpDown, "Este Campo No puede Ser Cero");
                 paso = false;
             }
            
@@ -100,7 +100,7 @@ namespace PrimerParcial.UI.Registro
             }
             if(paso)
             {
-                MessageBox.Show("Vendeor Guardado!!", "Exito!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Vendedor Guardado!!", "Exito!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Limpiar();
             }
             else
@@ -143,6 +143,48 @@ namespace PrimerParcial.UI.Registro
                 MessageBox.Show("Vendedor no Encontrado!!!", "Fallo!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        
+        private void sueldoNumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            Double sueldo = Convert.ToDouble(sueldoNumericUpDown.Value);
+            float retencion = Convert.ToSingle(retencionPorcentajeNumericUpDown.Value);
+
+            retencion /= 100;
+
+            Double Total = sueldo * retencion;
+            retencionCalculoTextBox.Text = Convert.ToString(Math.Round(Total, 3));
+
+        }
+
+        private void retencionPorcentajeNumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            Double sueldo = Convert.ToDouble(sueldoNumericUpDown.Value);
+            float retencion = Convert.ToSingle(retencionPorcentajeNumericUpDown.Value);
+
+            retencion /= 100;
+
+            Double Total = sueldo * retencion;
+            retencionCalculoTextBox.Text = Convert.ToString(Math.Round(Total,3));
+        }
+
+        private void nombresTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+
+        }
     }
 }

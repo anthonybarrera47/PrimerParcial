@@ -40,27 +40,27 @@
             this.BuscarButton = new System.Windows.Forms.Button();
             this.vendedorIDNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.nombresTextBox = new System.Windows.Forms.TextBox();
-            this.vendedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sueldoNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.retencionCalculoTextBox = new System.Windows.Forms.TextBox();
             this.retencionPorcentajeNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.vendedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             vendedorIDLabel = new System.Windows.Forms.Label();
             nombresLabel = new System.Windows.Forms.Label();
             sueldoLabel = new System.Windows.Forms.Label();
             retencionCalculoLabel = new System.Windows.Forms.Label();
             retencionPorcentajeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.vendedorIDNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vendedorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sueldoNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.retencionPorcentajeNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vendedorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // vendedorIDLabel
             // 
             vendedorIDLabel.AutoSize = true;
-            vendedorIDLabel.Location = new System.Drawing.Point(12, 64);
+            vendedorIDLabel.Location = new System.Drawing.Point(3, 64);
             vendedorIDLabel.Name = "vendedorIDLabel";
             vendedorIDLabel.Size = new System.Drawing.Size(89, 17);
             vendedorIDLabel.TabIndex = 16;
@@ -69,7 +69,7 @@
             // nombresLabel
             // 
             nombresLabel.AutoSize = true;
-            nombresLabel.Location = new System.Drawing.Point(12, 90);
+            nombresLabel.Location = new System.Drawing.Point(3, 90);
             nombresLabel.Name = "nombresLabel";
             nombresLabel.Size = new System.Drawing.Size(69, 17);
             nombresLabel.TabIndex = 18;
@@ -78,7 +78,7 @@
             // sueldoLabel
             // 
             sueldoLabel.AutoSize = true;
-            sueldoLabel.Location = new System.Drawing.Point(12, 127);
+            sueldoLabel.Location = new System.Drawing.Point(3, 127);
             sueldoLabel.Name = "sueldoLabel";
             sueldoLabel.Size = new System.Drawing.Size(56, 17);
             sueldoLabel.TabIndex = 19;
@@ -87,11 +87,11 @@
             // retencionCalculoLabel
             // 
             retencionCalculoLabel.AutoSize = true;
-            retencionCalculoLabel.Location = new System.Drawing.Point(12, 164);
+            retencionCalculoLabel.Location = new System.Drawing.Point(3, 167);
             retencionCalculoLabel.Name = "retencionCalculoLabel";
-            retencionCalculoLabel.Size = new System.Drawing.Size(126, 17);
+            retencionCalculoLabel.Size = new System.Drawing.Size(135, 17);
             retencionCalculoLabel.TabIndex = 20;
-            retencionCalculoLabel.Text = "Retencion Calculo:";
+            retencionCalculoLabel.Text = "Retencion A Pagar: ";
             // 
             // retencionPorcentajeLabel
             // 
@@ -168,28 +168,31 @@
             this.nombresTextBox.Name = "nombresTextBox";
             this.nombresTextBox.Size = new System.Drawing.Size(252, 22);
             this.nombresTextBox.TabIndex = 19;
-            // 
-            // vendedorBindingSource
-            // 
-            this.vendedorBindingSource.DataSource = typeof(PrimerParcial.Entidades.Vendedor);
+            this.nombresTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nombresTextBox_KeyPress);
             // 
             // sueldoNumericUpDown
             // 
             this.sueldoNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.vendedorBindingSource, "Sueldo", true));
             this.sueldoNumericUpDown.Location = new System.Drawing.Point(110, 125);
+            this.sueldoNumericUpDown.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
             this.sueldoNumericUpDown.Name = "sueldoNumericUpDown";
             this.sueldoNumericUpDown.Size = new System.Drawing.Size(120, 22);
             this.sueldoNumericUpDown.TabIndex = 20;
+            this.sueldoNumericUpDown.ValueChanged += new System.EventHandler(this.sueldoNumericUpDown_ValueChanged);
             // 
             // retencionCalculoTextBox
             // 
             this.retencionCalculoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vendedorBindingSource, "RetencionCalculo", true));
             this.retencionCalculoTextBox.Location = new System.Drawing.Point(144, 164);
+            this.retencionCalculoTextBox.MaxLength = 10;
             this.retencionCalculoTextBox.Name = "retencionCalculoTextBox";
             this.retencionCalculoTextBox.ReadOnly = true;
             this.retencionCalculoTextBox.Size = new System.Drawing.Size(100, 22);
             this.retencionCalculoTextBox.TabIndex = 21;
-            
             // 
             // retencionPorcentajeNumericUpDown
             // 
@@ -198,10 +201,15 @@
             this.retencionPorcentajeNumericUpDown.Name = "retencionPorcentajeNumericUpDown";
             this.retencionPorcentajeNumericUpDown.Size = new System.Drawing.Size(120, 22);
             this.retencionPorcentajeNumericUpDown.TabIndex = 22;
+            this.retencionPorcentajeNumericUpDown.ValueChanged += new System.EventHandler(this.retencionPorcentajeNumericUpDown_ValueChanged);
             // 
             // errorProvider
             // 
             this.errorProvider.ContainerControl = this;
+            // 
+            // vendedorBindingSource
+            // 
+            this.vendedorBindingSource.DataSource = typeof(PrimerParcial.Entidades.Vendedor);
             // 
             // Registro
             // 
@@ -229,10 +237,10 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Registro";
             ((System.ComponentModel.ISupportInitialize)(this.vendedorIDNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vendedorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sueldoNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.retencionPorcentajeNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vendedorBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
