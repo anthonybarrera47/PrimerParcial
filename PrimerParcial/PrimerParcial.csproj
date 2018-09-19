@@ -55,6 +55,12 @@
     <Compile Include="BLL\VendedorBLL.cs" />
     <Compile Include="DAL\Contexto.cs" />
     <Compile Include="Entidades\Vendedor.cs" />
+    <Compile Include="UI\Consulta\ConsultarVendedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consulta\ConsultarVendedores.Designer.cs">
+      <DependentUpon>ConsultarVendedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registro\Registro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\Consulta\ConsultarVendedores.resx">
+      <DependentUpon>ConsultarVendedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Registro\Registro.resx">
       <DependentUpon>Registro.cs</DependentUpon>
     </EmbeddedResource>
@@ -86,6 +95,7 @@
       <DependentUpon>VentanaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="PrimerParcial.Entidades.Vendedor.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -15,6 +15,7 @@ namespace PrimerParcial.Entidades
         public Double Sueldo { get; set; }
         public float RetencionPorcentaje{ get; set; }
         public String RetencionCalculo { get; set; }
+        public DateTime Fecha { get; set; }
 
         public Vendedor()
         {
@@ -23,6 +24,7 @@ namespace PrimerParcial.Entidades
             Sueldo = 0;
             RetencionPorcentaje = 0;
             RetencionCalculo = string.Empty;
+            Fecha = DateTime.Now;
         }
     }
 }

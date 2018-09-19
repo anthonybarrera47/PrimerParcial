@@ -34,10 +34,6 @@
             System.Windows.Forms.Label sueldoLabel;
             System.Windows.Forms.Label retencionCalculoLabel;
             System.Windows.Forms.Label retencionPorcentajeLabel;
-            this.EliminarButton = new System.Windows.Forms.Button();
-            this.GuardarButton = new System.Windows.Forms.Button();
-            this.NuevoButton = new System.Windows.Forms.Button();
-            this.BuscarButton = new System.Windows.Forms.Button();
             this.vendedorIDNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.nombresTextBox = new System.Windows.Forms.TextBox();
             this.sueldoNumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -45,6 +41,12 @@
             this.retencionPorcentajeNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.vendedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.EliminarButton = new System.Windows.Forms.Button();
+            this.GuardarButton = new System.Windows.Forms.Button();
+            this.NuevoButton = new System.Windows.Forms.Button();
+            this.BuscarButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.FechaDataTimePicker = new System.Windows.Forms.DateTimePicker();
             vendedorIDLabel = new System.Windows.Forms.Label();
             nombresLabel = new System.Windows.Forms.Label();
             sueldoLabel = new System.Windows.Forms.Label();
@@ -101,58 +103,6 @@
             retencionPorcentajeLabel.Size = new System.Drawing.Size(148, 17);
             retencionPorcentajeLabel.TabIndex = 21;
             retencionPorcentajeLabel.Text = "Retencion Porcentaje:";
-            // 
-            // EliminarButton
-            // 
-            this.EliminarButton.Image = global::PrimerParcial.Properties.Resources.if_cross_24_103181;
-            this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.EliminarButton.Location = new System.Drawing.Point(244, 215);
-            this.EliminarButton.Name = "EliminarButton";
-            this.EliminarButton.Size = new System.Drawing.Size(75, 62);
-            this.EliminarButton.TabIndex = 15;
-            this.EliminarButton.Text = "Eliminar";
-            this.EliminarButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.EliminarButton.UseVisualStyleBackColor = true;
-            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
-            // 
-            // GuardarButton
-            // 
-            this.GuardarButton.Image = global::PrimerParcial.Properties.Resources.if_floppy_disk_save_103863;
-            this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.GuardarButton.Location = new System.Drawing.Point(128, 215);
-            this.GuardarButton.Name = "GuardarButton";
-            this.GuardarButton.Size = new System.Drawing.Size(75, 62);
-            this.GuardarButton.TabIndex = 14;
-            this.GuardarButton.Text = "Guardar";
-            this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.GuardarButton.UseVisualStyleBackColor = true;
-            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
-            // 
-            // NuevoButton
-            // 
-            this.NuevoButton.Image = global::PrimerParcial.Properties.Resources.if_new10_216291;
-            this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.NuevoButton.Location = new System.Drawing.Point(12, 216);
-            this.NuevoButton.Name = "NuevoButton";
-            this.NuevoButton.Size = new System.Drawing.Size(75, 61);
-            this.NuevoButton.TabIndex = 13;
-            this.NuevoButton.Text = "Nuevo";
-            this.NuevoButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.NuevoButton.UseVisualStyleBackColor = true;
-            this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
-            // 
-            // BuscarButton
-            // 
-            this.BuscarButton.Image = global::PrimerParcial.Properties.Resources.if_search_126577;
-            this.BuscarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BuscarButton.Location = new System.Drawing.Point(244, 12);
-            this.BuscarButton.Name = "BuscarButton";
-            this.BuscarButton.Size = new System.Drawing.Size(86, 58);
-            this.BuscarButton.TabIndex = 12;
-            this.BuscarButton.Text = "Buscar";
-            this.BuscarButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BuscarButton.UseVisualStyleBackColor = true;
-            this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
             // vendedorIDNumericUpDown
             // 
@@ -211,11 +161,83 @@
             // 
             this.vendedorBindingSource.DataSource = typeof(PrimerParcial.Entidades.Vendedor);
             // 
+            // EliminarButton
+            // 
+            this.EliminarButton.Image = global::PrimerParcial.Properties.Resources.if_cross_24_103181;
+            this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.EliminarButton.Location = new System.Drawing.Point(244, 269);
+            this.EliminarButton.Name = "EliminarButton";
+            this.EliminarButton.Size = new System.Drawing.Size(75, 62);
+            this.EliminarButton.TabIndex = 15;
+            this.EliminarButton.Text = "Eliminar";
+            this.EliminarButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.EliminarButton.UseVisualStyleBackColor = true;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
+            // 
+            // GuardarButton
+            // 
+            this.GuardarButton.Image = global::PrimerParcial.Properties.Resources.if_floppy_disk_save_103863;
+            this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.GuardarButton.Location = new System.Drawing.Point(128, 269);
+            this.GuardarButton.Name = "GuardarButton";
+            this.GuardarButton.Size = new System.Drawing.Size(75, 62);
+            this.GuardarButton.TabIndex = 14;
+            this.GuardarButton.Text = "Guardar";
+            this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.GuardarButton.UseVisualStyleBackColor = true;
+            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
+            // 
+            // NuevoButton
+            // 
+            this.NuevoButton.Image = global::PrimerParcial.Properties.Resources.if_new10_216291;
+            this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.NuevoButton.Location = new System.Drawing.Point(12, 270);
+            this.NuevoButton.Name = "NuevoButton";
+            this.NuevoButton.Size = new System.Drawing.Size(75, 61);
+            this.NuevoButton.TabIndex = 13;
+            this.NuevoButton.Text = "Nuevo";
+            this.NuevoButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.NuevoButton.UseVisualStyleBackColor = true;
+            this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
+            // 
+            // BuscarButton
+            // 
+            this.BuscarButton.Image = global::PrimerParcial.Properties.Resources.if_search_126577;
+            this.BuscarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BuscarButton.Location = new System.Drawing.Point(244, 12);
+            this.BuscarButton.Name = "BuscarButton";
+            this.BuscarButton.Size = new System.Drawing.Size(86, 58);
+            this.BuscarButton.TabIndex = 12;
+            this.BuscarButton.Text = "Buscar";
+            this.BuscarButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BuscarButton.UseVisualStyleBackColor = true;
+            this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 205);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 17);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Fecha";
+            // 
+            // FechaDataTimePicker
+            // 
+            this.FechaDataTimePicker.CustomFormat = "dd/MM/yyyy";
+            this.FechaDataTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.FechaDataTimePicker.Location = new System.Drawing.Point(110, 200);
+            this.FechaDataTimePicker.Name = "FechaDataTimePicker";
+            this.FechaDataTimePicker.Size = new System.Drawing.Size(123, 22);
+            this.FechaDataTimePicker.TabIndex = 24;
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(401, 303);
+            this.ClientSize = new System.Drawing.Size(401, 352);
+            this.Controls.Add(this.FechaDataTimePicker);
+            this.Controls.Add(this.label1);
             this.Controls.Add(retencionPorcentajeLabel);
             this.Controls.Add(this.retencionPorcentajeNumericUpDown);
             this.Controls.Add(retencionCalculoLabel);
@@ -259,5 +281,7 @@
         private System.Windows.Forms.TextBox retencionCalculoTextBox;
         private System.Windows.Forms.NumericUpDown retencionPorcentajeNumericUpDown;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.DateTimePicker FechaDataTimePicker;
+        private System.Windows.Forms.Label label1;
     }
 }

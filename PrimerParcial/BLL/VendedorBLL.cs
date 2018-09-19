@@ -3,6 +3,7 @@ using PrimerParcial.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -79,6 +80,20 @@ namespace PrimerParcial.BLL
                 throw;
             }
             return vendedor;
+        }
+        public static List<Vendedor> GetList(Expression<Func<Vendedor,bool>>expression)
+        {
+            List<Vendedor> vendedores = new List<Vendedor>();
+            Contexto contexto = new Contexto();
+            try
+            {
+                vendedores = contexto.vendedor.Where(expression).ToList();
+                contexto.Dispose();
+            }catch(Exception)
+            {
+                throw;
+            }
+            return vendedores;
         }
     }
 }

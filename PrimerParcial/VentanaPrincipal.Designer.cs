@@ -33,6 +33,8 @@
             this.registrarVendedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.herramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaVendedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,6 +43,7 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registroVendedorToolStripMenuItem,
+            this.consultaToolStripMenuItem,
             this.herramientasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -78,6 +81,21 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // consultaToolStripMenuItem
+            // 
+            this.consultaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consultaVendedoresToolStripMenuItem});
+            this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
+            this.consultaToolStripMenuItem.Text = "Consulta";
+            // 
+            // consultaVendedoresToolStripMenuItem
+            // 
+            this.consultaVendedoresToolStripMenuItem.Name = "consultaVendedoresToolStripMenuItem";
+            this.consultaVendedoresToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
+            this.consultaVendedoresToolStripMenuItem.Text = "Consulta Vendedores";
+            this.consultaVendedoresToolStripMenuItem.Click += new System.EventHandler(this.consultaVendedoresToolStripMenuItem_Click);
+            // 
             // VentanaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -102,6 +120,8 @@
         private System.Windows.Forms.ToolStripMenuItem registrarVendedorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem herramientasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultaVendedoresToolStripMenuItem;
     }
 }
 

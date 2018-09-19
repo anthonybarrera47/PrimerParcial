@@ -26,6 +26,7 @@ namespace PrimerParcial.UI.Registro
             sueldoNumericUpDown.Value = Convert.ToDecimal(0);
             retencionPorcentajeNumericUpDown.Value = Convert.ToDecimal(0);
             retencionCalculoTextBox.Text = string.Empty;
+            FechaDataTimePicker.Value = DateTime.Now;
         }
 
         private void NuevoButton_Click(object sender, EventArgs e)
@@ -40,8 +41,8 @@ namespace PrimerParcial.UI.Registro
                 Nombres = nombresTextBox.Text,
                 Sueldo = Convert.ToDouble(sueldoNumericUpDown.Value),
                 RetencionPorcentaje = Convert.ToSingle(retencionPorcentajeNumericUpDown.Value),
-                RetencionCalculo = retencionCalculoTextBox.Text
-
+                RetencionCalculo = retencionCalculoTextBox.Text,
+                Fecha = FechaDataTimePicker.Value
             };
             return vendedor;
         }
@@ -52,6 +53,7 @@ namespace PrimerParcial.UI.Registro
             sueldoNumericUpDown.Value = Convert.ToDecimal(vendedor.Sueldo);
             retencionPorcentajeNumericUpDown.Value = Convert.ToDecimal(vendedor.RetencionPorcentaje);
             retencionCalculoTextBox.Text = Convert.ToString(vendedor.RetencionCalculo);
+            FechaDataTimePicker.Value = vendedor.Fecha;
         }
         private bool Validar()
         {

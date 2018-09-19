@@ -1,4 +1,5 @@
-﻿using PrimerParcial.UI.Registro;
+﻿using PrimerParcial.UI.Consulta;
+using PrimerParcial.UI.Registro;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,6 +31,13 @@ namespace PrimerParcial
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void consultaVendedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultarVendedores consultarVendedores = new ConsultarVendedores();
+            consultarVendedores.MdiParent = this;
+            consultarVendedores.Show();
         }
     }
 }
