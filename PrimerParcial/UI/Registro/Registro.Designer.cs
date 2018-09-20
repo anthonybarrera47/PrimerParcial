@@ -36,11 +36,11 @@
             System.Windows.Forms.Label retencionPorcentajeLabel;
             this.vendedorIDNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.nombresTextBox = new System.Windows.Forms.TextBox();
+            this.vendedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sueldoNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.retencionCalculoTextBox = new System.Windows.Forms.TextBox();
             this.retencionPorcentajeNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.vendedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.EliminarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
@@ -53,10 +53,10 @@
             retencionCalculoLabel = new System.Windows.Forms.Label();
             retencionPorcentajeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.vendedorIDNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vendedorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sueldoNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.retencionPorcentajeNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vendedorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // vendedorIDLabel
@@ -120,9 +120,14 @@
             this.nombresTextBox.TabIndex = 19;
             this.nombresTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nombresTextBox_KeyPress);
             // 
+            // vendedorBindingSource
+            // 
+            this.vendedorBindingSource.DataSource = typeof(PrimerParcial.Entidades.Vendedor);
+            // 
             // sueldoNumericUpDown
             // 
             this.sueldoNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.vendedorBindingSource, "Sueldo", true));
+            this.sueldoNumericUpDown.DecimalPlaces = 2;
             this.sueldoNumericUpDown.Location = new System.Drawing.Point(110, 125);
             this.sueldoNumericUpDown.Maximum = new decimal(new int[] {
             999999999,
@@ -147,6 +152,7 @@
             // retencionPorcentajeNumericUpDown
             // 
             this.retencionPorcentajeNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.vendedorBindingSource, "RetencionPorcentaje", true));
+            this.retencionPorcentajeNumericUpDown.DecimalPlaces = 2;
             this.retencionPorcentajeNumericUpDown.Location = new System.Drawing.Point(253, 164);
             this.retencionPorcentajeNumericUpDown.Name = "retencionPorcentajeNumericUpDown";
             this.retencionPorcentajeNumericUpDown.Size = new System.Drawing.Size(120, 22);
@@ -156,10 +162,6 @@
             // errorProvider
             // 
             this.errorProvider.ContainerControl = this;
-            // 
-            // vendedorBindingSource
-            // 
-            this.vendedorBindingSource.DataSource = typeof(PrimerParcial.Entidades.Vendedor);
             // 
             // EliminarButton
             // 
@@ -259,10 +261,10 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Registro";
             ((System.ComponentModel.ISupportInitialize)(this.vendedorIDNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vendedorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sueldoNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.retencionPorcentajeNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vendedorBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

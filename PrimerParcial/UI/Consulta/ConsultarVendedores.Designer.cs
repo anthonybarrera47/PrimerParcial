@@ -50,7 +50,7 @@
             // 
             this.DesdedateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.DesdedateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DesdedateTimePicker.Location = new System.Drawing.Point(67, 74);
+            this.DesdedateTimePicker.Location = new System.Drawing.Point(78, 74);
             this.DesdedateTimePicker.Name = "DesdedateTimePicker";
             this.DesdedateTimePicker.Size = new System.Drawing.Size(114, 22);
             this.DesdedateTimePicker.TabIndex = 1;
@@ -60,7 +60,7 @@
             // 
             this.HastadateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.HastadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.HastadateTimePicker.Location = new System.Drawing.Point(253, 74);
+            this.HastadateTimePicker.Location = new System.Drawing.Point(352, 74);
             this.HastadateTimePicker.Name = "HastadateTimePicker";
             this.HastadateTimePicker.Size = new System.Drawing.Size(114, 22);
             this.HastadateTimePicker.TabIndex = 2;
@@ -69,7 +69,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 79);
+            this.label1.Location = new System.Drawing.Point(23, 79);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 17);
             this.label1.TabIndex = 3;
@@ -78,7 +78,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(202, 79);
+            this.label2.Location = new System.Drawing.Point(301, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 17);
             this.label2.TabIndex = 4;
@@ -96,7 +96,7 @@
             "Sueldo",
             "Porciento En Retencion",
             "Retencion A Pagar"});
-            this.FiltroComboBox.Location = new System.Drawing.Point(15, 44);
+            this.FiltroComboBox.Location = new System.Drawing.Point(26, 44);
             this.FiltroComboBox.Name = "FiltroComboBox";
             this.FiltroComboBox.Size = new System.Drawing.Size(166, 24);
             this.FiltroComboBox.TabIndex = 5;
@@ -106,7 +106,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 24);
+            this.label3.Location = new System.Drawing.Point(23, 24);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 17);
             this.label3.TabIndex = 6;
@@ -114,7 +114,7 @@
             // 
             // CriterioTextBox
             // 
-            this.CriterioTextBox.Location = new System.Drawing.Point(187, 44);
+            this.CriterioTextBox.Location = new System.Drawing.Point(198, 44);
             this.CriterioTextBox.Name = "CriterioTextBox";
             this.CriterioTextBox.Size = new System.Drawing.Size(268, 22);
             this.CriterioTextBox.TabIndex = 7;
@@ -123,7 +123,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(184, 24);
+            this.label4.Location = new System.Drawing.Point(195, 24);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 17);
             this.label4.TabIndex = 8;
@@ -131,7 +131,7 @@
             // 
             // ConsultaButton
             // 
-            this.ConsultaButton.Location = new System.Drawing.Point(504, 43);
+            this.ConsultaButton.Location = new System.Drawing.Point(534, 43);
             this.ConsultaButton.Name = "ConsultaButton";
             this.ConsultaButton.Size = new System.Drawing.Size(94, 23);
             this.ConsultaButton.TabIndex = 9;
@@ -142,7 +142,7 @@
             // ConsultaVendedoresDataGridView
             // 
             this.ConsultaVendedoresDataGridView.ColumnHeadersHeight = 30;
-            this.ConsultaVendedoresDataGridView.Location = new System.Drawing.Point(15, 132);
+            this.ConsultaVendedoresDataGridView.Location = new System.Drawing.Point(12, 111);
             this.ConsultaVendedoresDataGridView.Name = "ConsultaVendedoresDataGridView";
             this.ConsultaVendedoresDataGridView.ReadOnly = true;
             this.ConsultaVendedoresDataGridView.RowTemplate.Height = 24;
@@ -172,8 +172,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.HastadateTimePicker);
             this.Controls.Add(this.DesdedateTimePicker);
+            this.MinimizeBox = false;
             this.Name = "ConsultarVendedores";
-            this.Text = "ConsultarVendedores";
+            this.Text = "Consultar Vendedores";
             ((System.ComponentModel.ISupportInitialize)(this.ConsultaVendedoresDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vendedorBindingSource)).EndInit();
